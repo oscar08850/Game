@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    public Rigidbody2D rigidbody;
+
     public float runSpeed = 40;
 
 
@@ -18,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
 
         runSpeed = runSpeed + SpeedChange;
     
+    }
+
+    public void SetGravityUpward() {
+        rigidbody.gravityScale *= -1;
     }
 
 

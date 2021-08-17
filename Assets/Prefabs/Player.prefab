@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3455972366001937365}
+  rigidbody: {fileID: 3455972366001937363}
   runSpeed: 40
 --- !u!114 &3455972366001937365
 MonoBehaviour:
