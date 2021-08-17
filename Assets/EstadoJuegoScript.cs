@@ -5,12 +5,15 @@ using UnityEngine;
 public class EstadoJuegoScript : MonoBehaviour
 {
 
-    //public static EstadoJuego estadoJuego;
+    public static EstadoJuegoScript estadoJuego;
+
+    public bool puerta1;
 
 
     void Awake()
 
     {
+        
         if (estadoJuego == null)
         {
             estadoJuego = this;
