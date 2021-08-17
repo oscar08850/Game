@@ -10,6 +10,7 @@ public class EstadoJuegoScript : MonoBehaviour
     public bool puerta1;
 
 
+
     void Awake()
 
     {
@@ -23,6 +24,25 @@ public class EstadoJuegoScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
+
+
+    public bool setDoorUnlock() {
+        puerta1 = true;
+        return puerta1;
+    }
+
+
+    public bool GetDoorStatus(int numero)
+    {
+        switch (numero)
+        {
+            case 1:
+                return puerta1;
+            default:
+                return false;
+        }
+    }
+
+
 }

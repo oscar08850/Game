@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40;
 
 
+    public void SetRunSpeed(int SpeedChange) {
+
+        runSpeed = runSpeed + SpeedChange;
+    
+    }
+
 
     // Update is called once per frame
     void Update()
