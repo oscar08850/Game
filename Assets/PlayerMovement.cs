@@ -11,11 +11,20 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
+    public Animator anim;
 
     public float runSpeed = 40;
 
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
+    }
+
+    
     public void SetRunSpeed(int SpeedChange) {
 
         runSpeed = runSpeed + SpeedChange;
@@ -23,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void SetGravityUpward() {
-        rigidbody.gravityScale *= -1;
+        rb.gravityScale *= -1;
     }
 
 
@@ -32,8 +41,16 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        if (horizontalMove > 0f || horizontalMove < 0f) {
+            anim.SetBool("running", true);
+        }
+        else
+            anim.SetBool("running", false);
+
+
         if (Input.GetButtonDown("Jump")) {
             jump = true;
+            //ANIM BOOL JUMP
         }
 
         if (Input.GetButtonDown("Crouch")){

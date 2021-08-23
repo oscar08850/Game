@@ -8,8 +8,12 @@ public class DoorScript : MonoBehaviour
 
     BoxCollider2D collider2D;
     GameObject gameObject;
+    int nivel = -1;
 
-
+    private void Start()
+    {
+        nivel = SceneManager.GetActiveScene().buildIndex;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
