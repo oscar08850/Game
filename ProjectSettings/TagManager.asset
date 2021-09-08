@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EstadoJuego
   - Button
+  - Cherry
+  - Trap
+  - GroundCheck
   layers:
   - Default
   - TransparentFX
@@ -42,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2714393375
+    locked: 0
+  - name: Terrain
+    uniqueID: 1715564221
     locked: 0
   - name: Default
     uniqueID: 0
