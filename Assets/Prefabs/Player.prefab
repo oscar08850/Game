@@ -161,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022392273, y: -0.26418203}
+  m_Offset: {x: -0.0022392273, y: -0.33259863}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.76755524, y: 1.4607714}
+  m_Size: {x: 0.76755524, y: 1.3239383}
   m_EdgeRadius: 0
 --- !u!50 &3455972366001937363
 Rigidbody2D:
@@ -210,6 +210,7 @@ MonoBehaviour:
   controller: {fileID: 3455972366001937365}
   rb: {fileID: 0}
   anim: {fileID: 0}
+  sp: {fileID: 0}
   runSpeed: 40
 --- !u!114 &3455972366001937365
 MonoBehaviour:
@@ -235,6 +236,7 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 0}
   suelo: 0
   controler: {fileID: 0}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
