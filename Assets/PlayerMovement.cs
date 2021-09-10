@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -13,14 +16,18 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator anim;
+    public SpriteRenderer sp;
 
     public float runSpeed = 40;
+
+    private bool gravityNormal = true;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sp = GetComponent<SpriteRenderer>();
 
     }
 
@@ -33,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetGravityUpward() {
         rb.gravityScale *= -1;
+        transform.Rotate(0, 0, 180);
+        controller.InvertJumpForce(); // poder saltar cuando estoy en el techo.
+        sp.flipX = !sp.flipX; // invierto sprite personaje para mirar en la dirección que camino.
+        
+
     }
 
 
