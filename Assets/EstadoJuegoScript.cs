@@ -14,7 +14,6 @@ public class EstadoJuegoScript : MonoBehaviour
     void Awake()
 
     {
-        
         if (estadoJuego == null)
         {
             estadoJuego = this;
@@ -24,6 +23,8 @@ public class EstadoJuegoScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Application.targetFrameRate = 60;
+
     }
 
 
